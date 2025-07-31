@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zelus - Rede de Cuidados</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+  <!-- Header -->
+  <header class="bg-blue-900 text-white p-4 shadow-md">
+    <div class="max-w-6xl mx-auto flex justify-between items-center">
+      <h1 class="text-3xl font-bold tracking-wide">Zelus</h1>
+      <nav>
+        <ul class="flex gap-6 text-sm font-medium">
+          <li><a href="#login" class="hover:underline">Entrar</a></li>
+          <li><a href="#cadastro" class="hover:underline">Cadastrar</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="text-center py-20 px-6 bg-white border-b">
+    <h2 class="text-4xl font-extrabold mb-4 text-blue-800">Conectando quem cuida com quem precisa de cuidado</h2>
+    <p class="text-lg max-w-2xl mx-auto text-gray-600 mb-6">Zelus é uma plataforma dedicada à saúde e bem-estar de idosos, cuidadores e profissionais da saúde. Organize, acompanhe e se conecte com confiança.</p>
+    <a href="#cadastro" class="bg-blue-700 text-white px-8 py-3 rounded-lg shadow hover:bg-blue-600 transition">Começar agora</a>
+  </section>
+
+  <!-- Funcionalidades -->
+  <section class="py-20 bg-gray-100">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 px-6">
+      <div class="bg-white rounded-xl shadow p-6 border-t-4 border-blue-600">
+        <h3 class="text-xl font-semibold mb-3">📅 Lembretes de Medicação</h3>
+        <p class="text-gray-600">Agende horários de medicação com alertas para garantir segurança e pontualidade no cuidado diário.</p>
+      </div>
+      <div class="bg-white rounded-xl shadow p-6 border-t-4 border-blue-600">
+        <h3 class="text-xl font-semibold mb-3">📝 Feed de Atualizações</h3>
+        <p class="text-gray-600">Registre atividades, rotinas e observações, mantendo todos os envolvidos bem informados.</p>
+      </div>
+      <div class="bg-white rounded-xl shadow p-6 border-t-4 border-blue-600">
+        <h3 class="text-xl font-semibold mb-3">💬 Comunicação Direta</h3>
+        <p class="text-gray-600">Converse com cuidadores, idosos e profissionais em tempo real de forma segura e prática.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Login -->
+  <section id="login" class="py-20 bg-white">
+    <div class="max-w-md mx-auto bg-gray-100 p-10 rounded-xl shadow">
+      <h3 class="text-2xl font-bold text-blue-800 mb-6">Acesso à Plataforma</h3>
+      <form>
+        <input type="email" placeholder="E-mail" class="w-full p-3 rounded border mb-4">
+        <input type="password" placeholder="Senha" class="w-full p-3 rounded border mb-6">
+        <button type="submit" class="w-full bg-blue-700 text-white py-3 rounded hover:bg-blue-600 transition">Entrar</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Cadastro -->
+  <section id="cadastro" class="py-20 bg-gray-100">
+    <div class="max-w-2xl mx-auto bg-white p-10 rounded-xl shadow">
+      <h3 class="text-3xl font-bold text-blue-800 mb-6">Criar uma nova conta</h3>
+      <form>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <input type="text" placeholder="Nome completo" class="p-3 rounded border">
+          <input type="email" placeholder="E-mail" class="p-3 rounded border">
+          <input type="password" placeholder="Senha" class="p-3 rounded border">
+          <input type="tel" placeholder="Telefone" class="p-3 rounded border">
+          <input type="text" placeholder="CPF" class="p-3 rounded border">
+          <input type="date" placeholder="Data de nascimento" class="p-3 rounded border">
+          <input type="text" placeholder="Cidade" class="p-3 rounded border">
+          <select class="p-3 rounded border">
+            <option value="">Tipo de usuário</option>
+            <option value="cuidador">Cuidador</option>
+            <option value="idoso">Idoso</option>
+            <option value="profissional">Profissional da saúde</option>
+          </select>
+        </div>
+        <textarea placeholder="Formações, cursos ou experiências (apenas cuidadores)" class="w-full mt-4 p-3 rounded border h-28"></textarea>
+        <button type="submit" class="w-full mt-6 bg-blue-700 text-white py-3 rounded hover:bg-blue-600 transition">Cadastrar</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-blue-900 text-white text-center py-6 mt-20">
+    <p class="text-sm">&copy; 2025 Zelus. Conectando com cuidado.</p>
+  </footer>
+</body>
+</html>
