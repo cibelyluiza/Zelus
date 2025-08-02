@@ -20,8 +20,40 @@
     <button type="button" onclick="cadastrarUsuario()">Cadastrar</button>
   </form>
 
-  <!-- Importa o código Firebase -->
-  <script type="module" src="firebase-config.js"></script>
+  <!-- Firebase + função de cadastro -->
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+    import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+
+    const firebaseConfig = {
+      apiKey: "SUA_API_KEY",
+      authDomain: "SEU_DOMINIO.firebaseapp.com",
+      projectId: "Zelus",  // ou o nome correto do seu projeto
+      storageBucket: "SEU_BUCKET.appspot.com",
+      messagingSenderId: "SEU_SENDER_ID",
+      appId: "SEU_APP_ID"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+
+    window.cadastrarUsuario = async function () {
+      const nome = document.getElementById("nome").value;
+      const email = document.getElementById("email").value;
+      const senha = document.getElementById("senha").value;
+
+      try {
+        await addDoc(collection(db, "usuarios"), {
+          nome: nome,
+          email: email,
+          senha: senha
+        });
+        alert("Usuário cadastrado com sucesso!");
+      } catch (e) {
+        console.error("Erro ao cadastrar: ", e);
+        alert("Erro ao cadastrar usuário.");
+      }
+    };
+  </script>
 </body>
 </html>
-
